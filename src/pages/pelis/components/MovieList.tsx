@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useInfiniteQuery, useQuery } from 'react-query';
 import { useLocation } from 'react-router-dom'
@@ -35,6 +36,13 @@ export const MovieList = () => {
 
 
     return (
+        <>
+            <Helmet>
+                <title>
+                    Search - {search ? valor : 'Movies'}
+                </title>
+                <meta name="description" content="Buscador de peliculas, encuantra las peluculas mas demandadas" />
+            </Helmet>
             <InfiniteScroll
                 className='flex flex-wrap overflow-y-scroll justify-center'
                 dataLength={movies.length}
@@ -59,5 +67,6 @@ export const MovieList = () => {
                     </div>
                 }
             </InfiniteScroll>
+            </>
     )
 }

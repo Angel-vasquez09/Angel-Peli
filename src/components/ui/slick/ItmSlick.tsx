@@ -43,7 +43,7 @@ export const ItemSlickHover:FC<ItemProps> = ({ width, height, pelicula, reveal }
     }
 
     const goToDetail = () => {
-        const slug = pelicula.title.replace(/\s/g, '_').toLowerCase() + '-' + pelicula.id;
+        const slug = pelicula.title.replace(/\s/g, '_').toLowerCase() + '*' + pelicula.id;
         router(`/pelis/detail-movie/${slug}`);
     }
 
@@ -101,7 +101,7 @@ export const ItemSlick: FC<ItemProps> = ({ width, height, pelicula, reveal }) =>
     }
 
     const goToDetail = () => {
-        const slug = pelicula.title.replace(/\s/g, '_').toLowerCase() + '-' + pelicula.id;
+        const slug = pelicula.title.replace(/\s/g, '_').toLowerCase() + '*' + pelicula.id;
         router(`/pelis/detail-movie/${slug}`);
     }
 
