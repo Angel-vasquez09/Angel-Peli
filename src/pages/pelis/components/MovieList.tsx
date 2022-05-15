@@ -44,7 +44,7 @@ export const MovieList = () => {
                 <meta name="description" content="Buscador de peliculas, encuantra las peluculas mas demandadas" />
             </Helmet>
             <InfiniteScroll
-                className='flex flex-wrap overflow-y-scroll justify-center'
+                className='flex flex-wrap overflow-y-scroll justify-center h-'
                 dataLength={movies.length}
                 hasMore={hasNextPage || isLoading} // Verifica si existe una pagina siguiente
                 next={() => fetchNextPage()} // Funcion para cargar la siguiente pagina
@@ -55,8 +55,8 @@ export const MovieList = () => {
                         <ItemSlick
                             reveal={true}
                             key={index}
-                            width={'w-28'}
-                            height={'h-52'}
+                            width={'xs:w-28 lg:w-40 xl:w-48'}
+                            height={'xs:h-52 lg:h-64 xl:h-80'}
                             pelicula={pelicula}
                         />
                         ))

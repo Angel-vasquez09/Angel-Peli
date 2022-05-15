@@ -53,7 +53,7 @@ export const ItemSlickHover:FC<ItemProps> = ({ width, height, pelicula, reveal }
                 onClick={goToDetail}
                 onMouseEnter={mouseEnter}
                 onMouseLeave={mouseLeave}
-                className={`${width} ${height} cursor-pointer rounded-md relative transition-all ease-in-out delay-150 hover:w-[440px] border-transparent border-2 hover:border-white`}>
+                className={`${width} ${height} cursor-pointer rounded-md relative transition-all ease-in-out delay-150 hover:xs:w-[440px] hover:lg:w-[560px] border-transparent border-2 hover:border-white`}>
                 <img
                     className='w-full hover:w-[440px] h-full z-20 object-cover rounded-md'
                     src={urlImg +'original/'+ (mouse ? pelicula.backdrop_path : pelicula.poster_path)}
@@ -106,7 +106,7 @@ export const ItemSlick: FC<ItemProps> = ({ width, height, pelicula, reveal }) =>
     }
 
     return (
-        <div className={`p-1 `} ref={sectionRef}>
+        <div className={`p-1`} ref={sectionRef}>
             <div
                 onClick={goToDetail}
                 onMouseEnter={mouseEnter}

@@ -22,16 +22,17 @@ const Home = () => {
                 <meta name="description" content="Las mejores peliculas en tendencia" />
             </Helmet>
 
-            <div className="w-full h-auto pb-6">
+            <div className="w-full h-auto pb-6 ">
 
                 {
                     isLoading && <Spinner />
                 }
                 <div className="md:ml-11">
                     <Slick
+                        autoplay={false}
                         itemSlick={"hover"}
-                        width={"w-52"}
-                        height={"h-96"}
+                        width={"xs:w-52 md:w-52 lg:w-72 xl:w-[26rem]"}
+                        height={"xs:h-72 md:h-72 lg:h-[26rem] xl:h-[44rem]"}
                         titulo={"Tendencias"}
                         categoria={"tendencias"}
                     />
@@ -44,8 +45,8 @@ const Home = () => {
                                 key={index}
                                 className="mb-2"
                                 itemSlick={"default"}
-                                width={"w-28"}
-                                height={"h-52"}
+                                width={"xs:w-28 lg:w-40 xl:w-48"}
+                                height={"xs:h-52 lg:h-64 xl:h-80"}
                                 titulo={categoria.name}
                                 categoria={categoria.id}
                             />

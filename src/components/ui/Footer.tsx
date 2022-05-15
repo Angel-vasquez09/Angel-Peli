@@ -6,7 +6,6 @@ export const Footer = () => {
 
     const { pathname } = useLocation();
     const isSearch = pathname.includes('search');
-    console.log(pathname);
 
     return (
         <footer className="z-50 md:hidden w-full bg-zinc-900 fixed bottom-0 left-0 h-12">
